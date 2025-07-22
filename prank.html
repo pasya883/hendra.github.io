@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Midnight Roleplay</title>
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    video.bg {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .loading-screen {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      font-size: 2em;
+      animation: fadeOut 2s ease 2s forwards;
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; visibility: hidden; }
+    }
+
+    .navbar {
+      position: fixed;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+    }
+
+    .navbar h1 {
+      color: #00bfff;
+    }
+
+    .navbar nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .navbar nav a:hover {
+      color: #00bfff;
+    }
+
+    .container {
+      padding: 7rem 2rem 2rem 2rem;
+      z-index: 2;
+      position: relative;
+      text-align: center;
+    }
+
+    .container h2 {
+      font-size: 3rem;
+      color: #00bfff;
+      margin-bottom: 1rem;
+    }
+
+    .container p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      z-index: 2;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <!-- Video Background -->
+  <video autoplay muted loop class="bg">
+    <source src="https://cdn.pixabay.com/vimeo/317569686/video-72344.mp4?width=1280&hash=d09e0f941389c055d5e17bfe190943f82b8f5827" type="video/mp4">
+  </video>
+
+  <!-- Loading Screen -->
+  <div class="loading-screen">Loading Midnight Roleplay...</div>
+
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <h1>MidnightRP</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#fitur">Fitur</a>
+      <a href="#gabung">Gabung</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+  </div>
+
+  <!-- Content -->
+  <div class="container" id="home">
+    <h2>Selamat Datang di Midnight Roleplay</h2>
+    <p>Server GTA SAMP terbaik dengan sistem roleplay realistis, komunitas aktif, dan fitur modern yang membuatmu betah bermain setiap hari.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Midnight Roleplay. Semua Hak Dilindungi.
+  </footer>
+</body>
+</html>
